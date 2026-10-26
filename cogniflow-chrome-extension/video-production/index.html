@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CogniFlow — Motion Design Launch Film (35s Master)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Master Viewport Container -->
+  <div id="viewport-wrapper">
+    <div id="stage">
+
+      <!-- Ambient Lighting & Gradients -->
+      <div class="ambient-glow"></div>
+      <div class="ambient-violet-pulse"></div>
+
+      <!-- Effects Canvas (Light Trails, Particles, Wavefronts) -->
+      <canvas id="fx-canvas"></canvas>
+
+      <!-- Kinetic Typography Layer -->
+      <div class="kinetic-text-wrap">
+        <h1 id="text-s1a" class="headline-text">Too many tools.</h1>
+        <h1 id="text-s1b" class="headline-text">Too many interruptions.</h1>
+        <h1 id="text-s2" class="headline-text">Where was I?</h1>
+        <h1 id="text-s3" class="headline-text">What if your browser <span class="violet-accent">remembered</span>?</h1>
+        <h1 id="text-s4a" class="headline-text">Meet <span class="violet-accent">CogniFlow</span></h1>
+        <h1 id="text-s4b" class="headline-text">Your AI workflow memory.</h1>
+        <h1 id="text-s5" class="headline-text violet-accent">Remember context.</h1>
+        <h1 id="text-s6a" class="headline-text">Less mental rebuilding.</h1>
+        <h1 id="text-s6b" class="headline-text violet-accent">More meaningful work.</h1>
+      </div>
+
+      <!-- Abstract Glowing Memory Symbol (Scene 3) -->
+      <div id="memory-symbol-container">
+        <div class="memory-prism-glow"></div>
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="symGrad" x1="20" y1="20" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#7357FF"/>
+              <stop offset="0.5" stop-color="#A9BFFF"/>
+              <stop offset="1" stop-color="#20C997"/>
+            </linearGradient>
+            <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <!-- Infinity Neural Loop -->
+          <path d="M50 90C50 65 72 45 95 68L125 98C145 118 165 95 165 75C165 55 145 40 125 60L95 90C72 112 50 135 25 115C10 98 25 75 50 90Z" 
+                stroke="url(#symGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowFilter)"/>
+          <circle cx="95" cy="78" r="8" fill="#FFFFFF" filter="url(#glowFilter)"/>
+        </svg>
+      </div>
+
+      <!-- Animated User Cursor -->
+      <div id="user-cursor">
+        <div id="cursor-ring" class="cursor-pulse-ring"></div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 3L11 21L14.5 13.5L22 10L4 3Z" fill="#171B35" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Master Chrome Browser Window -->
+      <div id="browser-window">
+
+        <!-- Top Browser Bar -->
+        <div class="browser-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+
+          <!-- Chrome Tabs Strip -->
+          <div class="tabs-strip">
+            <!-- Active Figma Tab -->
+            <div id="tab-figma" class="tab active">
+              <span class="tab-icon">
+                <svg width="14" height="14" viewBox="0 0 38 57" fill="none">
+                  <path d="M19 28.5C19 23.25 23.25 19 28.5 19C33.75 19 38 23.25 38 28.5C38 33.75 33.75 38 28.5 38C23.25 38 19 33.75 19 28.5Z" fill="#1ABCFE"/>
+                  <path d="M0 47.5C0 42.25 4.25 38 9.5 38H19V47.5C19 52.75 14.75 57 9.5 57C4.25 57 0 52.75 0 47.5Z" fill="#0ACF83"/>
+                  <path d="M19 0V19H28.5C33.75 19 38 14.75 38 9.5C38 4.25 33.75 0 28.5 0H19Z" fill="#FF7262"/>
+                  <path d="M0 9.5C0 14.75 4.25 19 9.5 19H19V0H9.5C4.25 0 0 4.25 0 9.5Z" fill="#F24E1E"/>
+                  <path d="M0 28.5C0 33.75 4.25 38 9.5 38H19V19H9.5C4.25 19 0 23.25 0 28.5Z" fill="#A259FF"/>
+                </svg>
+              </span>
+              <span>Checkout Flow v3.2</span>
+              <span class="tab-badge">Figma</span>
+            </div>
+
+            <!-- Slack Tab -->
+            <div id="tab-slack" class="tab">
+              <span class="tab-icon">#</span>
+              <span>#design-system</span>
+              <span style="font-size: 10px; opacity: 0.7;">(12)</span>
+            </div>
+
+            <!-- Jira Tab -->
+            <div id="tab-jira" class="tab">
+              <span class="tab-icon" style="color: #0052CC;">⚡</span>
+              <span>CF-42: Payment Flow</span>
+            </div>
+
+            <!-- Notion Tab -->
+            <div id="tab-notion" class="tab">
+              <span class="tab-icon">N</span>
+              <span>Q4 Product Strategy</span>
+            </div>
+
+            <!-- Gmail Tab -->
+            <div id="tab-gmail" class="tab">
+              <span class="tab-icon" style="color: #EA4335;">✉</span>
+              <span>Inbox (14)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Bar / Omnibox -->
+        <div class="browser-nav-bar">
+          <div class="nav-buttons">
+            <span>←</span>
+            <span>→</span>
+            <span>⟳</span>
+          </div>
+          <div class="omnibox">
+            <span>🔒</span>
+            <span class="url-domain">figma.com</span>/file/CF-Mobile-Checkout/v3.2
+          </div>
+          <div class="extension-tray">
+            <div class="extension-icon-btn" title="CogniFlow AI Memory Active">
+              <svg width="18" height="18" viewBox="0 0 128 128" fill="none">
+                <rect width="128" height="128" rx="28" fill="#7357FF"/>
+                <path d="M38 64C38 48 50 36 65 52L85 72C98 85 110 70 110 56" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+                <circle cx="65" cy="58" r="8" fill="#20C997"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Viewport Body -->
+        <div class="browser-viewport">
+
+          <!-- Primary Workspace (Figma Mockup) -->
+          <div id="main-content">
+            <div class="figma-app">
+              <!-- Left Tooling Hierarchy -->
+              <div class="figma-sidebar">
+                <div class="sidebar-title">Layers</div>
+                <div class="layer-item selected">❖ Mobile Checkout Frame</div>
+                <div class="layer-item">↳ Header Navigation</div>
+                <div class="layer-item">↳ Payment Method Selector</div>
+                <div class="layer-item">↳ Order Summary Card</div>
+                <div class="layer-item">↳ CTA Primary Button</div>
+                <div class="sidebar-title" style="margin-top: 14px;">Components</div>
+                <div class="layer-item">◇ CardInput.tsx</div>
+                <div class="layer-item">◇ ApplePayButton.tsx</div>
+              </div>
+
+              <!-- Main Interactive Canvas -->
+              <div class="figma-canvas">
+                <!-- Mobile Screen 1 -->
+                <div class="artboard-card">
+                  <div class="artboard-header">
+                    <span>Checkout</span>
+                    <span>$128.00</span>
+                  </div>
+                  <div class="artboard-body">
+                    <div class="spec-box">
+                      <h4>Express Checkout</h4>
+                      <p>Saved cards ready. Tap to confirm with biometric ID.</p>
+                    </div>
+                    <div class="spec-box" style="background: rgba(115, 87, 255, 0.08); border: 1px dashed #7357FF;">
+                      <h4 style="color: #7357FF;">CF-42 Context</h4>
+                      <p>Validating multi-currency intent before webhook response.</p>
+                    </div>
+                    <div class="mock-btn">Confirm Payment →</div>
+                  </div>
+                </div>
+
+                <!-- Mobile Screen 2 (Success State) -->
+                <div class="artboard-card" style="opacity: 0.75; transform: scale(0.95);">
+                  <div class="artboard-header" style="background: #20C997;">
+                    <span>Order Placed</span>
+                    <span>✓</span>
+                  </div>
+                  <div class="artboard-body">
+                    <div class="spec-box">
+                      <h4>Receipt #84920</h4>
+                      <p>Delivery scheduled for tomorrow at 2:00 PM.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clutter Layer (Overload Notifications & Windows) -->
+            <div class="clutter-layer">
+              <!-- Slack Notification -->
+              <div id="notif-slack" class="notification-popup" style="top: 24px; right: 28px;">
+                <div class="notif-badge notif-slack">#</div>
+                <div class="notif-content">
+                  <h5>Slack · #product-launch</h5>
+                  <p>Sarah: "Can we get the final Figma copy approved before 2pm?"</p>
+                </div>
+              </div>
+
+              <!-- Jira Alert -->
+              <div id="notif-jira" class="notification-popup" style="top: 105px; right: 28px;">
+                <div class="notif-badge notif-jira">⚡</div>
+                <div class="notif-content">
+                  <h5>Jira · Sprint CF-104</h5>
+                  <p>Payment gateway timeout error reported in staging cluster.</p>
+                </div>
+              </div>
+
+              <!-- Gmail Notification -->
+              <div id="notif-gmail" class="notification-popup" style="top: 186px; right: 28px;">
+                <div class="notif-badge notif-gmail">✉</div>
+                <div class="notif-content">
+                  <h5>Executive Sync Moved</h5>
+                  <p>Q4 Roadmap review rescheduled to 11:30 AM with design leads.</p>
+                </div>
+              </div>
+
+              <!-- Notion Comment -->
+              <div id="notif-notion" class="notification-popup" style="top: 267px; right: 28px;">
+                <div class="notif-badge notif-notion">N</div>
+                <div class="notif-content">
+                  <h5>Notion · David Chen</h5>
+                  <p>Commented: "Please link the updated API specs from Jira CF-42."</p>
+                </div>
+              </div>
+
+              <!-- Stacked Overload Windows (Scene 1) -->
+              <div id="floating-window-stack" class="floating-window" style="top: 80px; left: 160px; width: 680px; height: 420px;">
+                <div style="background: #171B35; color: white; padding: 12px 18px; border-radius: 14px 14px 0 0; font-size: 13px; font-weight: 600; display: flex; justify-content: space-between;">
+                  <span>Task Overload Stack (7 Pending Applications)</span>
+                  <span>⚠ Memory High</span>
+                </div>
+                <div style="padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                  <div style="background: #F3F5FA; padding: 14px; border-radius: 10px;">
+                    <strong style="font-size: 12px; color: #7357FF;">Notion PRD</strong>
+                    <p style="font-size: 11px; color: #555; margin-top: 4px;">18 open comments pending resolution.</p>
+                  </div>
+                  <div style="background: #F3F5FA; padding: 14px; border-radius: 10px;">
+                    <strong style="font-size: 12px; color: #0052CC;">Jira Sprint</strong>
+                    <p style="font-size: 11px; color: #555; margin-top: 4px;">4 blocking tickets assigned to you.</p>
+                  </div>
+                  <div style="background: #F3F5FA; padding: 14px; border-radius: 10px;">
+                    <strong style="font-size: 12px; color: #4A154B;">Slack Huddle</strong>
+                    <p style="font-size: 11px; color: #555; margin-top: 4px;">Design sync starting in 3 minutes.</p>
+                  </div>
+                  <div style="background: #F3F5FA; padding: 14px; border-radius: 10px;">
+                    <strong style="font-size: 12px; color: #EA4335;">Gmail Thread</strong>
+                    <p style="font-size: 11px; color: #555; margin-top: 4px;">Urgent client feedback on v3 flow.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 2: Lost Context Frost Blur Overlay -->
+            <div id="context-blur-overlay"></div>
+
+            <!-- Scene 6: Restored Clean Dual Workspace -->
+            <div id="focused-workspace">
+              <!-- Left Focused Figma Pane -->
+              <div class="focused-pane pane-figma">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                  <span style="font-size: 15px; font-weight: 700; color: #171B35;">Checkout Flow v3.2 · Live Artboard</span>
+                  <span style="font-size: 12px; color: #7357FF; font-weight: 600;">Active Working File</span>
+                </div>
+                <div style="flex: 1; background: #F8F9FD; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 260px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); padding: 16px; border: 2px solid #7357FF;">
+                    <h4 style="font-size: 14px; color: #171B35; margin-bottom: 8px;">Order Validation</h4>
+                    <p style="font-size: 11px; color: #666; line-height: 1.4;">State restored to line 142. Biometric token verified.</p>
+                    <div style="margin-top: 14px; height: 36px; background: #7357FF; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">
+                      ✓ Ready for QA
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Focused Notion Spec Pane -->
+              <div class="focused-pane pane-notion">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                  <span style="font-size: 15px; font-weight: 700; color: #171B35;">Launch Specs & PRD</span>
+                  <span style="font-size: 12px; color: #0E8360; font-weight: 600;">Synced with Jira</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <div style="padding: 10px; background: #F4F6FC; border-radius: 8px; font-size: 12px; color: #333;">
+                    ✓ <strong>Design Approval:</strong> Mobile wireframes validated
+                  </div>
+                  <div style="padding: 10px; background: #F4F6FC; border-radius: 8px; font-size: 12px; color: #333;">
+                    ✓ <strong>Backend Hook:</strong> CF-42 payment route confirmed
+                  </div>
+                  <div style="padding: 10px; background: #F4F6FC; border-radius: 8px; font-size: 12px; color: #333;">
+                    ✓ <strong>Context Preserved:</strong> All 4 tool states linked
+                  </div>
+                </div>
+              </div>
+
+              <!-- Flow State Restored Badge -->
+              <div class="flow-state-banner">
+                <span style="width: 8px; height: 8px; background: #20C997; border-radius: 50%;"></span>
+                FLOW STATE RESTORED
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Scene 4 & 5: CogniFlow Official Sidepanel -->
+          <div id="sidepanel">
+            <!-- Sidepanel Header -->
+            <div class="sidepanel-header">
+              <div class="brand-badge">
+                <svg viewBox="0 0 128 128" fill="none">
+                  <rect width="128" height="128" rx="28" fill="#7357FF"/>
+                  <path d="M38 64C38 48 50 36 65 52L85 72C98 85 110 70 110 56" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+                  <circle cx="65" cy="58" r="8" fill="#20C997"/>
+                </svg>
+                <span class="brand-title">CogniFlow</span>
+              </div>
+              <div class="status-pill">
+                <span class="indicator-dot"></span>
+                ACTIVE SYNC
+              </div>
+            </div>
+
+            <!-- Sidepanel Content -->
+            <div class="sidepanel-body">
+              <div class="welcome-section">
+                <div style="display: inline-block; background: rgba(115, 87, 255, 0.1); color: #7357FF; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-bottom: 6px;">
+                  WELCOME BACK!
+                </div>
+                <h3>Here’s where you left off</h3>
+                <p>Preserved workflow context across 4 tools.</p>
+              </div>
+
+              <!-- AI Quick Summary Card -->
+              <div class="ai-summary-card">
+                <div class="summary-tag">
+                  <span>✦</span> AI Quick Summary
+                </div>
+                <div class="summary-text">
+                  You were finalizing checkout interaction states in Figma, responding to ticket CF-42 in Jira, and updating team launch specs.
+                </div>
+
+                <!-- Structured Checklist (Expands in Scene 5) -->
+                <div id="summary-checklist" class="progress-checklist" style="opacity: 0; max-height: 0; overflow: hidden; transition: all 0.4s ease;">
+                  <div class="check-item">
+                    <span class="check-circle">✓</span>
+                    <span>3 Figma design comments resolved</span>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-circle">✓</span>
+                    <span>Jira CF-42 awaiting QA review</span>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-circle">✓</span>
+                    <span>Notion launch specs updated 14m ago</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Workflow Tabs Section -->
+              <div class="workflow-tabs-section">
+                <h4>Related Workflow Tabs</h4>
+                <div class="tabs-list">
+                  <!-- Figma Card -->
+                  <div class="workflow-card active-tab">
+                    <div class="workflow-card-icon" style="background: rgba(242, 78, 30, 0.1); color: #F24E1E;">❖</div>
+                    <div class="workflow-info">
+                      <div class="workflow-title">Figma · Checkout Flow v3.2</div>
+                      <div class="workflow-desc">Active canvas · 3 unresolved comments</div>
+                    </div>
+                  </div>
+
+                  <!-- Jira Card -->
+                  <div class="workflow-card">
+                    <div class="workflow-card-icon" style="background: rgba(0, 82, 204, 0.1); color: #0052CC;">⚡</div>
+                    <div class="workflow-info">
+                      <div class="workflow-title">Jira · CF-42 Payment API</div>
+                      <div class="workflow-desc">Issue assigned · In review</div>
+                    </div>
+                  </div>
+
+                  <!-- Notion Card -->
+                  <div class="workflow-card">
+                    <div class="workflow-card-icon" style="background: rgba(0, 0, 0, 0.08); color: #000;">N</div>
+                    <div class="workflow-info">
+                      <div class="workflow-title">Notion · Launch Strategy</div>
+                      <div class="workflow-desc">Requirements & copy deck</div>
+                    </div>
+                  </div>
+
+                  <!-- Slack Card -->
+                  <div class="workflow-card">
+                    <div class="workflow-card-icon" style="background: rgba(74, 21, 75, 0.1); color: #4A154B;">#</div>
+                    <div class="workflow-info">
+                      <div class="workflow-title">Slack · #checkout-sprint</div>
+                      <div class="workflow-desc">4 unread team messages</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Workflow Hero Button -->
+            <div class="resume-btn-container">
+              <button id="btn-resume" class="btn-resume">
+                <span>Resume Workflow</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Scene 7: Hero Brand Ending Lockup -->
+      <div id="brand-ending">
+        <!-- 3D Glass Hero Logo -->
+        <div class="brand-hero-logo">
+          <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="brandLogoGrad" x1="0" y1="0" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#7357FF"/>
+                <stop offset="0.6" stop-color="#A9BFFF"/>
+                <stop offset="1" stop-color="#20C997"/>
+              </linearGradient>
+              <filter id="heroShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="rgba(115, 87, 255, 0.45)"/>
+              </filter>
+            </defs>
+            <rect width="140" height="140" rx="36" fill="url(#brandLogoGrad)" filter="url(#heroShadow)"/>
+            <path d="M42 70C42 52 56 38 72 56L94 78C108 92 122 76 122 62" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round"/>
+            <circle cx="72" cy="64" r="9" fill="#FFFFFF"/>
+          </svg>
+        </div>
+
+        <h1 class="brand-hero-name">CogniFlow</h1>
+        <h2 class="brand-hero-tagline">Your work. Remembered.</h2>
+        <div class="brand-cta-pill">
+          <span>cogniflow.ai</span>
+          <span style="opacity: 0.4;">·</span>
+          <span style="color: #7357FF;">Add to Chrome</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Video Control Deck (Bottom UI) -->
+  <div id="control-deck">
+    <!-- Play / Pause & Rewind -->
+    <button id="btn-play" class="deck-btn primary">▶ Play Film</button>
+    <button id="btn-rewind" class="deck-btn">↺ 0s</button>
+
+    <!-- Timecode -->
+    <div id="timecode" class="timecode-display">00:00.00 / 00:35.00</div>
+
+    <!-- Timeline Scrubber & Scene Navigator -->
+    <div class="scrubber-wrap">
+      <div class="scene-markers">
+        <button class="scene-marker-btn" data-time="0">S1 Overload (0s)</button>
+        <button class="scene-marker-btn" data-time="4">S2 Lost Context (4s)</button>
+        <button class="scene-marker-btn" data-time="8">S3 AI Reveal (8s)</button>
+        <button class="scene-marker-btn" data-time="12">S4 CogniFlow (12s)</button>
+        <button class="scene-marker-btn" data-time="18">S5 How It Works (18s)</button>
+        <button class="scene-marker-btn" data-time="25">S6 Back in Flow (25s)</button>
+        <button class="scene-marker-btn" data-time="30">S7 Brand Ending (30s)</button>
+      </div>
+      <input type="range" id="timeline-slider" min="0" max="35" step="0.0333" value="0">
+    </div>
+
+    <!-- Voice-Over & Audio Toggles -->
+    <button id="btn-vo" class="deck-btn">VO: ON</button>
+    <button id="btn-audio" class="deck-btn">🔊 Audio</button>
+
+    <!-- Export 1080p Video Button -->
+    <button id="btn-export" class="deck-btn primary">Export 1080p Video</button>
+    <div id="export-progress" class="export-progress-bar">
+      <div id="export-fill" class="export-progress-fill"></div>
+    </div>
+
+    <!-- Fullscreen Toggle -->
+    <button id="btn-fullscreen" class="deck-btn">⛶ Fullscreen</button>
+  </div>
+
+  <!-- Load Master Scripts -->
+  <script src="audio-engine.js"></script>
+  <script src="motion.js"></script>
+  <script src="export-video.js"></script>
+
+  <!-- Master Timeline Controller -->
+  <script>
+    class CogniFlowPlayer {
+      constructor() {
+        this.duration = 35.0; // 35.0 seconds exact
+        this.currentTime = 0.0;
+        this.isPlaying = false;
+        this.lastFrameTime = performance.now();
+
+        // UI elements
+        this.stage = document.getElementById('stage');
+        this.btnPlay = document.getElementById('btn-play');
+        this.btnRewind = document.getElementById('btn-rewind');
+        this.slider = document.getElementById('timeline-slider');
+        this.timecode = document.getElementById('timecode');
+        this.btnVO = document.getElementById('btn-vo');
+        this.btnAudio = document.getElementById('btn-audio');
+        this.btnExport = document.getElementById('btn-export');
+        this.btnFullscreen = document.getElementById('btn-fullscreen');
+        this.sceneBtns = document.querySelectorAll('.scene-marker-btn');
+
+        this.initResize();
+        this.bindEvents();
+        this.seek(0);
+      }
+
+      initResize() {
+        const resize = () => {
+          const wrapper = document.getElementById('viewport-wrapper');
+          const scale = Math.min(wrapper.clientWidth / 1920, wrapper.clientHeight / 1080);
+          this.stage.style.transform = `scale(${scale})`;
+        };
+        window.addEventListener('resize', resize);
+        resize();
+      }
+
+      bindEvents() {
+        this.btnPlay.addEventListener('click', () => this.togglePlay());
+        this.btnRewind.addEventListener('click', () => { this.seek(0); if (!this.isPlaying) this.play(); });
+
+        this.slider.addEventListener('input', (e) => {
+          this.seek(parseFloat(e.target.value));
+        });
+
+        this.sceneBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const time = parseFloat(btn.dataset.time);
+            this.seek(time);
+          });
+        });
+
+        this.btnVO.addEventListener('click', () => {
+          window.audioEngine.voEnabled = !window.audioEngine.voEnabled;
+          this.btnVO.textContent = window.audioEngine.voEnabled ? 'VO: ON' : 'VO: OFF';
+          this.btnVO.style.opacity = window.audioEngine.voEnabled ? '1.0' : '0.6';
+        });
+
+        this.btnAudio.addEventListener('click', () => {
+          window.audioEngine.ensureContext();
+          if (window.audioEngine.audioElement) {
+            window.audioEngine.audioElement.muted = !window.audioEngine.audioElement.muted;
+            this.btnAudio.textContent = window.audioEngine.audioElement.muted ? '🔇 Muted' : '🔊 Audio';
+          }
+        });
+
+        this.btnExport.addEventListener('click', () => {
+          window.videoExporter.startExport();
+        });
+
+        this.btnFullscreen.addEventListener('click', () => {
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+          } else {
+            document.exitFullscreen().catch(() => {});
+          }
+        });
+
+        // Spacebar shortcut
+        window.addEventListener('keydown', (e) => {
+          if (e.code === 'Space') {
+            e.preventDefault();
+            this.togglePlay();
+          }
+        });
+      }
+
+      togglePlay() {
+        if (this.isPlaying) {
+          this.pause();
+        } else {
+          this.play();
+        }
+      }
+
+      play() {
+        this.isPlaying = true;
+        this.btnPlay.textContent = '⏸ Pause';
+        this.lastFrameTime = performance.now();
+        window.audioEngine.playAt(this.currentTime);
+        requestAnimationFrame((t) => this.loop(t));
+      }
+
+      pause() {
+        this.isPlaying = false;
+        this.btnPlay.textContent = '▶ Play Film';
+        window.audioEngine.pause();
+      }
+
+      seek(t) {
+        this.currentTime = Math.max(0, Math.min(this.duration, t));
+        this.slider.value = this.currentTime;
+        this.updateTimecode();
+        window.motionRenderer.render(this.currentTime);
+        window.audioEngine.seek(this.currentTime);
+        this.updateSceneMarkers();
+      }
+
+      updateSceneMarkers() {
+        this.sceneBtns.forEach(btn => {
+          const btnTime = parseFloat(btn.dataset.time);
+          if (this.currentTime >= btnTime && this.currentTime < (btnTime + 5.0)) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      updateTimecode() {
+        const min = Math.floor(this.currentTime / 60);
+        const sec = Math.floor(this.currentTime % 60);
+        const cs = Math.floor((this.currentTime % 1) * 100);
+        const pad = (n) => n.toString().padStart(2, '0');
+        this.timecode.textContent = `${pad(min)}:${pad(sec)}.${pad(cs)} / 00:35.00`;
+      }
+
+      loop(now) {
+        if (!this.isPlaying) return;
+
+        const delta = (now - this.lastFrameTime) / 1000.0;
+        this.lastFrameTime = now;
+
+        this.currentTime += delta;
+        if (this.currentTime >= this.duration) {
+          this.currentTime = this.duration;
+          this.pause();
+        }
+
+        this.slider.value = this.currentTime;
+        this.updateTimecode();
+        this.updateSceneMarkers();
+
+        window.motionRenderer.render(this.currentTime);
+        window.audioEngine.update(this.currentTime);
+
+        if (this.isPlaying) {
+          requestAnimationFrame((t) => this.loop(t));
+        }
+      }
+    }
+
+    window.player = new CogniFlowPlayer();
+  </script>
+</body>
+</html>
